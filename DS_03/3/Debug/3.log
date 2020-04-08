@@ -1,0 +1,8 @@
+﻿  main.c
+c:\users\1234\documents\visual studio 2017\projects\ds_03\3\main.c(3): warning C4005: 'EXIT_FAILURE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdlib.h(49): note: 'EXIT_FAILURE'의 이전 정의를 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\3\main.c(61): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\3\main.c(91): warning C4047: '함수': 'int ***'의 간접 참조 수준이 'int **'과(와) 다릅니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\3\main.c(91): warning C4024: 'freeAry2D': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+  3.vcxproj -> c:\users\1234\documents\visual studio 2017\Projects\DS_03\Debug\3.exe
+  3.vcxproj -> c:\users\1234\documents\visual studio 2017\Projects\DS_03\Debug\3.pdb (Partial PDB)

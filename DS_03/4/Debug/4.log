@@ -1,0 +1,13 @@
+﻿  main.c
+c:\users\1234\documents\visual studio 2017\projects\ds_03\4\main.c(13): warning C4013: 'strcmp'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\4\main.c(23): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\4\main.c(24): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\4\main.c(25): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\4\main.c(29): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\4\main.c(30): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+  4.vcxproj -> C:\Users\1234\documents\visual studio 2017\Projects\DS_03\Debug\4.exe
+  4.vcxproj -> C:\Users\1234\documents\visual studio 2017\Projects\DS_03\Debug\4.pdb (Partial PDB)

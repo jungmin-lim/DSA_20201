@@ -1,0 +1,8 @@
+﻿  main.c
+z:\data structure\ds_01\4-1\main.c(51): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+z:\data structure\ds_01\4-1\main.c(49): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+z:\data structure\ds_01\4-1\main.c(67): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+  4-1.vcxproj -> Z:\Data Structure\DS_01\Debug\4-1.exe
+  4-1.vcxproj -> Z:\Data Structure\DS_01\Debug\4-1.pdb (Partial PDB)

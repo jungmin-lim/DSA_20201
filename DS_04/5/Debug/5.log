@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\1234\documents\visual studio 2017\projects\ds_04\5\main.c(2): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_04\5\main.c(54): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  5.vcxproj -> C:\Users\1234\documents\visual studio 2017\Projects\DS_04\Debug\5.exe
+  5.vcxproj -> C:\Users\1234\documents\visual studio 2017\Projects\DS_04\Debug\5.pdb (Partial PDB)

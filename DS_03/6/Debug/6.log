@@ -1,0 +1,17 @@
+﻿  main.c
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(4): warning C4005: 'EXIT_FAILURE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdlib.h(49): note: 'EXIT_FAILURE'의 이전 정의를 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(71): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(73): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(78): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(82): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(67): warning C4101: 'finishB' :참조되지 않은 지역 변수입니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(67): warning C4101: 'startA' :참조되지 않은 지역 변수입니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(67): warning C4101: 'finishA' :참조되지 않은 지역 변수입니다.
+c:\users\1234\documents\visual studio 2017\projects\ds_03\6\main.c(67): warning C4101: 'startB' :참조되지 않은 지역 변수입니다.
+  6.vcxproj -> C:\Users\1234\documents\visual studio 2017\Projects\DS_03\Debug\6.exe
+  6.vcxproj -> C:\Users\1234\documents\visual studio 2017\Projects\DS_03\Debug\6.pdb (Partial PDB)

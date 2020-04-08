@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\laptop\source\repos\ds_07\2\main.c(124): warning C4129: '%': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+c:\users\laptop\source\repos\ds_07\2\main.c(124): warning C4778: 'printf' : 서식 문자열 '%'이(가) 종결되지 않았습니다.
+c:\users\laptop\source\repos\ds_07\2\main.c(124): warning C4778: 'fprintf' : 서식 문자열 '%'이(가) 종결되지 않았습니다.
+  2.vcxproj -> C:\Users\laptop\source\repos\DS_07\Debug\2.exe

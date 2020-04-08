@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\1234\documents\visual studio 2017\projects\ds_02\1\main.c(3): warning C4005: 'EXIT_FAILURE': 매크로 재정의
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdlib.h(49): note: 'EXIT_FAILURE'의 이전 정의를 참조하십시오.
+  1.vcxproj -> c:\users\1234\documents\visual studio 2017\Projects\DS_02\Debug\1.exe
+  1.vcxproj -> c:\users\1234\documents\visual studio 2017\Projects\DS_02\Debug\1.pdb (Partial PDB)

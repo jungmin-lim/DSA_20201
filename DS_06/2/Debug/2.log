@@ -1,0 +1,4 @@
+﻿  main.c
+c:\users\laptop\source\repos\ds_06\2\main.c(57): warning C4477: 'fscanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'short *'입니다.
+  c:\users\laptop\source\repos\ds_06\2\main.c(57): note: 서식 문자열에서 '%hd'을(를) 사용하는 것이 좋습니다.
+  2.vcxproj -> C:\Users\laptop\source\repos\DS_06\Debug\2.exe
