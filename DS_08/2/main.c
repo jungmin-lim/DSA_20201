@@ -10,6 +10,7 @@ void insert(listNode **first, listNode *x, int dat);
 listNode *insertSorted(listNode *head, int dat);
 void delete(listNode **first, listNode *trail, listNode *x);
 listNode *deleteOdd(listNode *head);
+listNode *deleteAll(listNode *head);
 void printList(listNode *linkedList);
 void printData(listNode *head);
 
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]) {
 	printf("\nThe ordered list contains:\n");
 	printData(linkedList);
 
+	linkedList = deleteAll(linkedList);
 	fclose(f);
 	return 0;
 }
@@ -50,7 +52,7 @@ void insert(listNode **first, listNode *x, int dat) {
 	}
 	else {
 		if (x == NULL) {
-			temp->link = NULL;
+			temp->link = *first;
 			*first = temp;
 		}
 		else {
@@ -63,14 +65,8 @@ void insert(listNode **first, listNode *x, int dat) {
 listNode *insertSorted(listNode *head, int dat) {
 	listNode *p, *q, *node;
 
-	if ((node = (listNode *)malloc(sizeof(*node))) == NULL) {
-		fprintf(stderr, "Insufficient Memory");
-		exit(EXIT_FAILURE);
-	}
-	node->data = dat;
-	
 	p = head;
-	q = head;
+	q = NULL;
 
 	while (p != NULL) {
 		if (p->data > dat) {
@@ -80,14 +76,7 @@ listNode *insertSorted(listNode *head, int dat) {
 		p = p->link;
 	}
 	
-	if (p == head) {
-		node->link = head;
-		head = node;
-	}
-	else {
-		node->link = p;
-		q->link = node;
-	}
+	insert(&head, q, dat);
 	return head;
 }
 
@@ -102,23 +91,15 @@ void delete(listNode **first, listNode *trail, listNode *x) {
 }
 
 listNode *deleteOdd(listNode *head) {
-	listNode *p, *q;
+	listNode *p, *q, *temp;
 	p = head;
-	q = head;
+	q = NULL;
 
 	while (p != NULL) {
 		if ((p->data) % 2) {
-			if (p == head) {
-				head = head->link;
-				free(p);
-				p = head;
-				q = head;
-			}
-			else {
-				q->link = p->link;
-				free(p);
-				p = q->link;
-			}
+			temp = p->link;
+			delete(&head, q, p);
+			p = temp;
 		}
 		else {
 			q = p;
@@ -127,6 +108,19 @@ listNode *deleteOdd(listNode *head) {
 	}
 	return head;
 }
+
+listNode *deleteAll(listNode *head) {
+	listNode *p, *q;
+	p = head;
+
+	while (p != NULL) {
+		head = head->link;
+		free(p);
+		p = head;
+	}
+	return head;
+}
+
 
 void printList(listNode *linkedList) {
 	listNode *p;

@@ -1,1 +1,4 @@
-﻿  2.vcxproj -> C:\Users\laptop\Documents\data_structure\DS_08\Debug\2.exe
+﻿  main.c
+c:\users\laptop\documents\data_structure\ds_08\2\main.c(66): warning C4101: 'node' :참조되지 않은 지역 변수입니다.
+c:\users\laptop\documents\data_structure\ds_08\2\main.c(113): warning C4101: 'q' :참조되지 않은 지역 변수입니다.
+  2.vcxproj -> C:\Users\laptop\Documents\data_structure\DS_08\Debug\2.exe

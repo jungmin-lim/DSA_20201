@@ -1,3 +1,4 @@
 ﻿  main.c
-c:\users\laptop\documents\data_structure\ds_08\1\main.c(45): warning C4047: '=': 'listPointer'의 간접 참조 수준이 'listPointer *'과(와) 다릅니다.
+c:\users\laptop\documents\data_structure\ds_08\1\main.c(48): warning C4047: '=': 'listPointer'의 간접 참조 수준이 'listPointer *'과(와) 다릅니다.
+c:\users\laptop\documents\data_structure\ds_08\1\main.c(118): warning C4101: 'q' :참조되지 않은 지역 변수입니다.
   1.vcxproj -> C:\Users\laptop\Documents\data_structure\DS_08\Debug\1.exe

@@ -12,8 +12,7 @@ typedef struct listNode {
 }listNode;
 
 listNode *makeList(listNode *head);
-listNode *makeMaleList(listNode *maleList, listNode *head);
-listNode *makeFemaleList(listNode *femaleList, listNode *head);
+void makeGenderList(listNode **maleList, listNode **femaleList, listNode *head);
 void printData(listNode *head);
 
 int main(int argc, char *argv[]) {
@@ -26,12 +25,11 @@ int main(int argc, char *argv[]) {
 	printData(linkedList);
 	printf("\n\n");
 
-	maleList = makeMaleList(maleList, linkedList);
+	makeGenderList(&maleList, &femaleList, linkedList);
 	printf("남자 리스트\n");
 	printData(maleList);
 	printf("\n\n");
 	
-	femaleList = makeFemaleList(femaleList, linkedList);
 	printf("여자 리스트\n");
 	printData(femaleList);
 	printf("\n");
@@ -66,69 +64,42 @@ listNode *makeList(listNode *head) {
 		}
 	}
 
+	fclose(f);
+
 	return head;
 }
 
-listNode *makeMaleList(listNode *maleList, listNode *head) {
-	listNode *p, *q, *node;
-	p = maleList;
-	q = head;
-	while (q != NULL) {
-		if (!strcmp(q->gender, "남자")) {
-			if ((node = (listNode *)malloc(sizeof(*node))) == NULL) {
-				fprintf(stderr, "Insufficient Memory");
-				exit(EXIT_FAILURE);
-			}
-			strcpy(node->name, q->name);
-			strcpy(node->work, q->work);
-			strcpy(node->gender, q->gender);
-			node->link = NULL;
-
+void makeGenderList(listNode **maleList, listNode **femaleList, listNode *head) {
+	listNode *p, *q, *r;
+	p = *maleList;
+	q = *femaleList;
+	r = head;
+	while (r != NULL) {
+		if (!strcmp(r->gender, "남자")) {
 			if (p == NULL) {
-				maleList = node;
-				p = maleList;
+				*maleList = r;
+				p = *maleList;
 			}
 			else {
-				p->link = node;
+				p->link = r;
 				p = p->link;
 			}
 		}
-
-		q = q->link;
-	}
-
-	return maleList;
-}
-
-listNode *makeFemaleList(listNode *femaleList, listNode *head) {
-	listNode *p, *q, *node;
-	p = femaleList;
-	q = head;
-	while (q != NULL) {
-		if (!strcmp(q->gender, "여자")) {
-			if ((node = (listNode *)malloc(sizeof(*node))) == NULL) {
-				fprintf(stderr, "Insufficient Memory");
-				exit(EXIT_FAILURE);
-			}
-			strcpy(node->name, q->name);
-			strcpy(node->work, q->work);
-			strcpy(node->gender, q->gender);
-			node->link = NULL;
-
-			if (p == NULL) {
-				femaleList = node;
-				p = femaleList;
+		else {
+			if (q == NULL) {
+				*femaleList = r;
+				q = *femaleList;
 			}
 			else {
-				p->link = node;
-				p = p->link;
+				q->link = r;
+				q = q->link;
+
 			}
 		}
-
-		q = q->link;
+		r = r->link;
 	}
-
-	return femaleList;
+	p->link = NULL;
+	q->link = NULL;
 }
 
 void printData(listNode *head) {

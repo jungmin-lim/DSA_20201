@@ -11,6 +11,7 @@ void insert(listPointer *first, listPointer x, int dat);
 listPointer insertSorted(listPointer head, int dat);
 void delete(listPointer *first, listPointer trail, listPointer x);
 listPointer deleteOdd(listPointer head);
+listPointer deleteAll(listPointer head);
 void printList(listPointer *linkedList);
 void printData(listPointer head);
 
@@ -36,6 +37,8 @@ int main(int argc, char *argv[]) {
 	linkedList = deleteOdd(linkedList);
 	printf("\nThe ordered list contains:\n");
 	printData(linkedList);
+
+	linkedList = deleteAll(linkedList);
 	fclose(f);
 	return 0;
 }
@@ -54,7 +57,7 @@ void insert(listPointer *first, listPointer x, int dat) {
 	}
 	else {
 		if (x == NULL) {
-			temp->link = NULL;
+			temp->link = *first;
 			*first = temp;
 		}
 		else {
@@ -65,16 +68,10 @@ void insert(listPointer *first, listPointer x, int dat) {
 }
 
 listPointer insertSorted(listPointer head, int dat) {
-	listPointer p, q, node;
+	listPointer p, q;
 
-	if ((node = (listPointer)malloc(sizeof(*node))) == NULL) {
-		fprintf(stderr, "Insufficient Memory");
-		exit(EXIT_FAILURE);
-	}
-	node->data = dat;
-	
 	p = head;
-	q = head;
+	q = NULL;
 
 	while (p != NULL) {
 		if (p->data > dat) {
@@ -84,14 +81,7 @@ listPointer insertSorted(listPointer head, int dat) {
 		p = p->link;
 	}
 	
-	if (p == head) {
-		node->link = head;
-		head = node;
-	}
-	else {
-		node->link = p;
-		q->link = node;
-	}
+	insert(&head, q, dat);
 	return head;
 }
 
@@ -106,28 +96,32 @@ void delete(listPointer *first, listPointer trail, listPointer x) {
 }
 
 listPointer deleteOdd(listPointer head) {
-	listPointer p, q;
+	listPointer p, q, temp;
 	p = head;
-	q = head;
+	q = NULL;
 
 	while (p != NULL) {
 		if ((p->data) % 2) {
-			if (p == head) {
-				head = head->link;
-				free(p);
-				p = head;
-				q = head;
-			}
-			else {
-				q->link = p->link;
-				free(p);
-				p = q->link;
-			}
+			temp = p->link;
+			delete(&head, q, p);
+			p = temp;
 		}
 		else {
 			q = p;
 			p = p->link;
 		}
+	}
+	return head;
+}
+
+listPointer deleteAll(listPointer head) {
+	listPointer p, q;
+	p = head;
+
+	while (p != NULL) {
+		head = head->link;
+		free(p);
+		p = head;
 	}
 	return head;
 }
