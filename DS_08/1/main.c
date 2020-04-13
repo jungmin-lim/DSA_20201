@@ -12,7 +12,7 @@ listPointer insertSorted(listPointer head, int dat);
 void delete(listPointer *first, listPointer trail, listPointer x);
 listPointer deleteOdd(listPointer head);
 listPointer deleteAll(listPointer head);
-void printList(listPointer *linkedList);
+void printList(listPointer linkedList);
 void printData(listPointer head);
 
 int main(int argc, char *argv[]) {
@@ -126,11 +126,11 @@ listPointer deleteAll(listPointer head) {
 	return head;
 }
 
-void printList(listPointer *linkedList) {
+void printList(listPointer linkedList) {
 	printf("Linked List contains: ");
-	while (*linkedList) {
-		printf("%4d ", (*linkedList)->data);
-		(*linkedList) = (*linkedList)->link;
+	while (linkedList) {
+		printf("%4d ", linkedList->data);
+		linkedList = linkedList->link;
 	}
 }
 
