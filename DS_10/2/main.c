@@ -68,6 +68,7 @@ int main(int argc, char *argv[]) {
 			addRear(coef, expon, polyB);
 		}
 	}
+	fclose(f);
 
 	polyC = cpadd(polyA, polyB);
 
