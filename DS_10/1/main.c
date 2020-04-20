@@ -63,9 +63,9 @@ int main(int argc, char *argv[]) {
 	polyPrint(polyC);
 	printf("\n");
 
-	deleteAll(polyA);
-	deleteAll(polyB);
-	deleteAll(polyC);
+	polyA = deleteAll(polyA);
+	polyB = deleteAll(polyB);
+	polyC = deleteAll(polyC);
 	return 0;
 }
 
