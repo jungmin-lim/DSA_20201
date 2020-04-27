@@ -19,6 +19,7 @@ void insertTree(treePointer *root, queuePointer *head, char data);
 void inorder(treePointer root);
 void preorder(treePointer root);
 void postorder(treePointer root);
+void freeTree(treePointer root);
 
 int main(int argc, char *argv[]){
 	FILE *f;
@@ -42,6 +43,8 @@ int main(int argc, char *argv[]){
 	postorder(root);
 	printf("\n");
 
+	freeTree(root);
+	root = NULL;
 	return 0;
 }
 
@@ -125,5 +128,13 @@ void postorder(treePointer root) {
 		postorder(root->leftChild);
 		postorder(root->rightChild);
 		printf("%c", root->data);
+	}
+}
+
+void freeTree(treePointer root) {
+	if (root) {
+		freeTree(root->leftChild);
+		freeTree(root->rightChild);
+		free(root);
 	}
 }

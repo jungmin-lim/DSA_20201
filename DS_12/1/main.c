@@ -12,6 +12,7 @@ void init(treePointer root);
 void inorder(treePointer node);
 void preorder(treePointer node);
 void postorder(treePointer node);
+void freeTree(treePointer root);
 
 int main(int argc, char *argv[]) {
 	treePointer root;
@@ -34,6 +35,8 @@ int main(int argc, char *argv[]) {
 
 	printf("postorder traversal	:\n");
 	postorder(root);
+
+	freeTree(root);
 	return 0;
 }
 
@@ -88,5 +91,13 @@ void postorder(treePointer node) {
 		postorder(node->leftChild);
 		postorder(node->rightChild);
 		printf("(%p : %p %c %p)\n", node, node->leftChild, node->data, node->rightChild);
+	}
+}
+
+void freeTree(treePointer root) {
+	if (root) {
+		freeTree(root->leftChild);
+		freeTree(root->rightChild);
+		free(root);
 	}
 }
