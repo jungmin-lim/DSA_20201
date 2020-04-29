@@ -133,7 +133,7 @@ treePointer dequeue(queuePointer *queue) {
 }
 
 int isOperand(char dat) {
-	if (dat >= 'A' && dat <= 'Z') {
+	if ((dat >= 'A' && dat <= 'Z') || (dat >= 'a' && dat <= 'z')) {
 		return 1;
 	}
 	return 0;
