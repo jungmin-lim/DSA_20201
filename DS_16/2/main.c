@@ -46,6 +46,13 @@ int main(int argc, char *argv[]) {
 
 		changeWinner(arr, winner, n);
 	}
+
+	fprintf(stdout, "\nsorting with min-winner tree\n");
+	
+	fprintf(stdout, "\nsorted result\n");
+	for (int i = 0; i < n; ++i) {
+		fprintf(stdout, "%5d", sorted[i]);
+	}
 	return 0;
 }
 
