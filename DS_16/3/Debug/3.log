@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\jungmin.lim.cs\documents\20201\data_structure\ds_16\3\main.c(45): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int [1024][10]'과(와) 다릅니다.
+c:\users\jungmin.lim.cs\documents\20201\data_structure\ds_16\3\main.c(45): warning C4024: 'makeArr': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+c:\users\jungmin.lim.cs\documents\20201\data_structure\ds_16\3\main.c(80): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+  3.vcxproj -> C:\Users\jungmin.lim.cs\Documents\20201\Data_Structure\DS_16\Debug\3.exe

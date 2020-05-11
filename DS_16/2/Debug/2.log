@@ -1,0 +1,3 @@
+﻿  main.c
+c:\users\jungmin.lim.cs\documents\20201\data_structure\ds_16\2\main.c(13): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+  2.vcxproj -> C:\Users\jungmin.lim.cs\Documents\20201\Data_Structure\DS_16\Debug\2.exe
