@@ -1,0 +1,4 @@
+﻿  main.c
+d:\documents\20201\data_structure\ds_19\2\main.c(49): warning C4020: 'dfs': 실제 매개 변수가 너무 많습니다.
+d:\documents\20201\data_structure\ds_19\2\main.c(78): warning C4029: 선언된 정식 매개 변수 목록이 정의와 다릅니다.
+  2.vcxproj -> D:\Documents\20201\Data_Structure\DS_19\Debug\2.exe
