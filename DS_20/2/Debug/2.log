@@ -1,0 +1,4 @@
+﻿  main.c
+d:\documents\20201\data_structure\ds_20\2\main.c(1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+  d:\documents\20201\data_structure\ds_20\2\main.c: note: '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+  2.vcxproj -> D:\Documents\20201\Data_Structure\DS_20\Debug\2.exe
