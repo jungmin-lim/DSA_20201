@@ -1,3 +1,10 @@
 ﻿  main.c
-d:\documents\20201\data_structure\ds_22\3\main.c(62): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(11): warning C4091: 'typedef ': 변수를 선언하지 않으면 'record' 왼쪽은 무시됩니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(40): warning C4133: '함수': 'record [100]'과(와) 'int *' 사이의 형식이 호환되지 않습니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(45): warning C4133: '함수': 'record [100]'과(와) 'int *' 사이의 형식이 호환되지 않습니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(57): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(65): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(80): warning C4133: '함수': 'record *'과(와) 'int *' 사이의 형식이 호환되지 않습니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(83): warning C4133: '함수': 'record *'과(와) 'int *' 사이의 형식이 호환되지 않습니다.
+d:\documents\20201\data_structure\ds_22\3\main.c(67): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
   3.vcxproj -> D:\Documents\20201\Data_Structure\DS_22\Debug\3.exe

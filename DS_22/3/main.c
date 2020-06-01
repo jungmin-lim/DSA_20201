@@ -6,6 +6,10 @@
 
 #define MAX_SIZE 100
 
+typedef struct record {
+	int key;
+};
+
 int s, try = 0;
 
 void swap(int *i, int *j);
@@ -14,7 +18,8 @@ void quickSort(int list[], int left, int right);
 
 int main(int argc, char *argv[]) {
 	FILE *fp;
-	int list[MAX_SIZE], size;
+	struct record list[MAX_SIZE];
+	int size;
 	int i;
 
 	fp = fopen("input.txt", "r");
@@ -22,12 +27,12 @@ int main(int argc, char *argv[]) {
 	s = size;
 
 	for (i = 0; i < size; ++i) {
-		fscanf(fp, "%d", &list[i]);
+		fscanf(fp, "%d", &list[i].key);
 	}
 
 	fprintf(stdout, "<<<<<<<<< Input List >>>>>>>>>>\n");
 	for (i = 0; i < size; ++i) {
-		fprintf(stdout, "%d ", list[i]);
+		fprintf(stdout, "%d ", list[i].key);
 	}
 	fprintf(stdout, "\n");
 
@@ -49,28 +54,28 @@ void swap(int *i, int *j) {
 	*j = temp;
 }
 
-void printList(int list[]) {
+void printList(struct record list[]) {
 	int i;
 	for (i = 0; i < s; ++i) {
-		fprintf(stdout, "%d ", list[i]);
+		fprintf(stdout, "%d ", list[i].key);
 	}
 	fprintf(stdout, "\n");
 }
 
-void quickSort(int list[], int left, int right) {
+void quickSort(struct record list[], int left, int right) {
 	int pivot, i, j;
 	int temp;
 
 	if (left < right) {
 		i = left; j = right + 1;
-		pivot = list[left];
+		pivot = list[left].key;
 		do {
 			do {
 				i++;
-			} while (list[i] < pivot && i <= right);
+			} while (list[i].key < pivot && i <= right);
 			do {
 				j--;
-			} while (list[j] > pivot && j >= left+1);
+			} while (list[j].key > pivot && j >= left+1);
 
 			if (i < j) swap(&list[i], &list[j]);
 		} while (i < j);
