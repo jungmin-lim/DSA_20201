@@ -1,0 +1,5 @@
+﻿  main.c
+d:\documents\20201\data_structure\ds_23\3\main.c(44): warning C4477: 'fprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'element'입니다.
+d:\documents\20201\data_structure\ds_23\3\main.c(77): warning C4477: 'fprintf' : 서식 문자열 '%4d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'element'입니다.
+d:\documents\20201\data_structure\ds_23\3\main.c(59): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
+  3.vcxproj -> D:\Documents\20201\Data_Structure\DS_23\Debug\3.exe
