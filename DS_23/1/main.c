@@ -110,7 +110,7 @@ void mergeSort(element a[], int n) {
 void printList(element list[]) {
 	int i;
 	for (i = 1; i <= s; ++i) {
-		fprintf(stdout, "%5d ", list[i]);
+		fprintf(stdout, "%5d ", list[i].key);
 	}
 	fprintf(stdout, "\n");
 }

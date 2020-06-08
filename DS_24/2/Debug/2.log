@@ -1,0 +1,4 @@
+﻿  main.c
+d:\documents\20201\data_structure\ds_24\2\main.c(11): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+d:\documents\20201\data_structure\ds_24\2\main.c(11): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
+  2.vcxproj -> D:\Documents\20201\Data_Structure\DS_24\Debug\2.exe

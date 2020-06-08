@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 	
 	fprintf(stdout, "\n<<<<<<<<<< Sorted List >>>>>>>>>>\n");
 	for (i = 1; i <= size; ++i) {
-		fprintf(stdout, "%d ", heap[i]);
+		fprintf(stdout, "%d ", heap[i].key);
 	}
 	fprintf(stdout, "\n");
 	fclose(fp);
@@ -74,7 +74,7 @@ void heapSort(element a[], int n) {
 		swap(&a[1], &a[i + 1]);
 		adjust(a, 1, i);
 		for (j = 1; j <= i; ++j) {
-			fprintf(stdout, "%4d", a[j]);
+			fprintf(stdout, "%4d", a[j].key);
 		}
 		fprintf(stdout, "\n");
 	}

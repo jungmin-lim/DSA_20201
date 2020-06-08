@@ -1,3 +1,2 @@
 ﻿  main.c
-d:\documents\20201\data_structure\ds_23\1\main.c(113): warning C4477: 'fprintf' : 서식 문자열 '%5d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'element'입니다.
   1.vcxproj -> D:\Documents\20201\Data_Structure\DS_23\Debug\1.exe
