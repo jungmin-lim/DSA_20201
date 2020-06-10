@@ -10,10 +10,16 @@
 int count = 0;
 
 void init_rand(int data[]) {
-	int i;
+	int i, j;
 	data[0] = 0;
 	for (i = 1; i < BUCKET; i++) {
 		data[i] = (rand() % (BUCKET - 1)) + 1;
+		for (j = 0; j < i; ++j) {
+			if (data[i] == data[j]) {
+				i--;
+				break;
+			}
+		}
 	}
 	return;
 }
