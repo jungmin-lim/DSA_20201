@@ -94,4 +94,7 @@ int main() {
 	else {
 		printf("item: %s, key : %d, the number of comparisions : %d", data->item, data->key, count);
 	}
+
+	fclose(fp);
+	return 0;
 }

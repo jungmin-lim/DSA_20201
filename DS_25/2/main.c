@@ -11,46 +11,44 @@ int count = 0;
 
 void init_rand(int data[]) {
 	int i;
+	data[0] = 0;
 	for (i = 1; i < BUCKET; i++) {
 		data[i] = (rand() % (BUCKET - 1)) + 1;
-		if ((flag & (1 << data)) > 0) {
-			i--;
-			continue;
-		}
-		else {
-			randNum[i] = data;
-			flag = flag | (1 << data);
-		}
 	}
+	return;
 }
 
-int hash(int item) {
-	return item % b;
+int hashFunction(int item) {
+	return item % BUCKET;
 }
 
-int random_probing(int item) {
-	int key = hash(item);
-	for (int i = 0; i < b; i++) {
-		compare_count++;
-		if (ht[hash(key + randNum[i])] == item) return hash(key + randNum[i]);
+int random_probing(int hash[], int rand_data[], int item) {
+	int i, key = hashFunction(item);
+	for (i = 0; i < BUCKET; i++) {
+		count++;
+		if (hash[hashFunction(key + rand_data[i])] == item) return hashFunction(key + rand_data[i]);
 	}
 	return -1;
 }
 
 int main() {
 	FILE* fp; 
-	int data[100], rand_data[BUCKET], seed, size;
+	int hash[BUCKET], data[100], rand_data[BUCKET], seed, size;
+	int key, buck, search;
 	int i = 0;
+
+	for (i = 0; i < BUCKET; ++i) {
+		hash[i] = -1;
+	}
 
 	fp = fopen("input.txt", "r");
 
 	printf("key sequence from file :");
-
-	// input data from file
+	i = 0;
 	while (fscanf(fp, "%d", &data[i]) != EOF) {
 		fprintf(stdout, "%5d", data[i++]);
 	}
-	size = i - 1;
+	size = i;
 
 	printf("\ninput seed >> ");
 
@@ -58,45 +56,48 @@ int main() {
 	srand(seed);
 
 	init_rand(rand_data);
-
 	printf("\n");
 
-	// make hash table
-	iter = 0;
-	while (tempArr[iter] != -999) {
-		key = hash(tempArr[iter]);
-		cur = 0;
-		while (ht[hash(key + randNum[cur])] != 0) {
-			cur++;
-			if (cur == b) {
-				printf("\n==== Overflow!! ====\n");
+	for(i = 0; i < size; ++i) {
+		key = hashFunction(data[i]);
+		buck = 0;
+		while (hash[hashFunction(key + rand_data[buck])] != -1) {
+			buck++;
+			if (buck == BUCKET) {
+				fprintf(stderr, "hash overflow\n");
 				exit(EXIT_FAILURE);
 			}
 		}
-		ht[hash(key + randNum[cur])] = tempArr[iter];
-		iter++;
+		hash[hashFunction(key + rand_data[buck])] = data[i];
 	}
 
-	// print data
-	for (int i = 1; i < b; i++) {
-		printf("randNum[%d] : %3d\n", i, randNum[i]);
+	for (int i = 1; i < BUCKET; i++) {
+		fprintf(stdout, "randNum[%d] : %3d\n", i, rand_data[i]);
 	}
 
-	printf("\n\t   key\n");
-	for (int i = 0; i < b; i++) {
-		printf("ht[%2d] : %4d\n", i, ht[i]);
+	fprintf(stdout, "\n\t   key\n");
+	for (int i = 0; i < BUCKET; i++) {
+		if (hash[i] < 0) {
+			fprintf(stdout, "ht[%2d] : \n", i);
+		}
+		else fprintf(stdout, "ht[%2d] : %4d\n", i, hash[i]);
 	}
 	printf("\n\n");
 
-	// search data
 	while (1) {
-		printf("input 0 to quit\nkey to search >> ");
-		scanf("%d", &buf);
-		if (buf == 0) break;
-		compare_count = 0;
-		key = random_probing(buf);
+		fprintf(stdout, "input 0 to quit\n");
+		fprintf(stdout, "key to search >> ");
+
+		scanf("%d", &search);
+		if (search == 0) break;
+
+		count = 0;
+		key = random_probing(hash, rand_data, search);
 		
 		if(key == -1) printf("it doesn't exist!\n\n");
-		else printf("key : %d, the number of comparisions : %d\n\n", buf, compare_count);
+		else printf("key : %d, the number of comparisions : %d\n\n", search, count);
 	}
+
+	fclose(fp);
+	return 0;
 }
